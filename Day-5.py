@@ -7,13 +7,3 @@ def birthday(s, d, m):
             c += 1
     return c
 
-
-#APPROACH-2
-
-def birthday(s, d, m):
-    count = 0
-    for i in range(len(s)):
-        s1 = sum(s[i:i+m])
-        if (s1 == d):
-            count += 1
-    return count
