@@ -1,6 +1,16 @@
 #APPROACH-1
 
 def birthday(s, d, m):
+    c = 0
+    for i in range(len(s) - m + 1):
+        if sum(s[i:i + m]) == d:
+            c += 1
+    return c
+
+
+#APPROACH-2
+
+def birthday(s, d, m):
     count = 0
     for i in range(len(s)):
         s1 = sum(s[i:i+m])
