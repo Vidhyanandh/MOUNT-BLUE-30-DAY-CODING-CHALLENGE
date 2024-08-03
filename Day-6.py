@@ -29,6 +29,6 @@ def migratoryBirds(arr):
             max_count=j
             smallest_bird_id=i
         elif j==max_count:
-            if smallest_bird_id is None or i<smallest_bird_id:
+            if  i<smallest_bird_id:
                 smallest_bird_id=i
     return smallest_bird_id
