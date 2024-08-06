@@ -15,3 +15,17 @@ def timeConversion(s):
             hour = str(hour_time)
     
     return hour + mins
+
+
+#Approach - 2
+def timeConversion(s):
+    hour = int(s[:2])
+    minute = s[3:5]
+    second = s[6:8]
+    period = s[-2:]
+    if period == 'PM' and hour != 12:
+        hour += 12
+    elif period == 'AM' and hour == 12:
+        hour = 0
+    hour = str(hour) if hour >= 10 else '0' + str(hour)
+    return hour + ':' + minute + ':' + second
